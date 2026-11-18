@@ -179,3 +179,18 @@ In the Airflow interface:
 This project is designed as a local-development demonstration. It uses interactive AWS SSO authentication and development-oriented Docker Compose settings.
 
 Production deployment would require stronger credential management, dedicated IAM roles, secure secret storage, and additional operational monitoring.
+
+### Successful Airflow Pipeline Execution
+
+The pipeline successfully orchestrates AWS Glue transformations,
+Redshift staging loads, automated data quality checks, and
+production warehouse refreshes.
+
+![Successful Airflow Pipeline](images/Airflow-UI.png)
+
+### Sales Analytics with Amazon Redshift
+
+The dimensional warehouse supports analytical queries for
+monthly revenue, shipping revenue, and order volume.
+
+![Redshift Monthly Sales Analytics](images/redshift_monthly_sales.png)
