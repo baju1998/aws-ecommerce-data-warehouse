@@ -1,0 +1,45 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Local datasets
+data/raw/
+data/processed/
+
+# Test cache
+.pytest_cache/
+
+# IDE files
+.vscode/
+
+# Airflow logs and local configuration
+logs/
+airflow.db
+airflow.cfg
+
+# AWS credentials and private keys
+.aws/
+*.pem
+*.key
+
+# Additional Python environments
+venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+
+# Experimental Airflow configuration
+docker-compose-airflow3.yaml

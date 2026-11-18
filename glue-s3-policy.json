@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListEcommerceBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::aws-ecommerce-data-warehouse"
+    },
+    {
+      "Sid": "ReadRawAndScripts",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::aws-ecommerce-data-warehouse/raw/*",
+        "arn:aws:s3:::aws-ecommerce-data-warehouse/scripts/*"
+      ]
+    },
+    {
+      "Sid": "WriteProcessedData",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::aws-ecommerce-data-warehouse/processed/*"
+    },
+    {
+      "Sid": "AllowProcessedFolderMarker",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::aws-ecommerce-data-warehouse/processed_$folder$"
+    }
+  ]
+}
